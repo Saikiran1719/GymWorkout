@@ -179,7 +179,12 @@
     gap: 10px; 
     margin-bottom: 2rem; 
     overflow-x: auto; 
+    overflow-y: hidden;
     padding: 1rem 0;
+    padding-right: 1rem;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    min-width: 0;
   }
   
   .filter-tabs::-webkit-scrollbar { height: 4px; }
@@ -196,8 +201,12 @@
     font-weight: 600;
     cursor: pointer; 
     white-space: nowrap; 
+    flex-shrink: 0;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    min-height: 40px;
+    display: flex;
+    align-items: center;
     position: relative;
     overflow: hidden;
     letter-spacing: 0.3px;
@@ -671,8 +680,10 @@
       margin-bottom: 1.5rem;
       -webkit-overflow-scrolling: touch;
       overflow-x: auto;
+      overflow-y: hidden;
       scroll-behavior: smooth;
       padding-bottom: 0.5rem;
+      padding-right: 0.75rem;
     }
     
     .tab-btn { 
@@ -681,6 +692,7 @@
       min-height: 44px;
       display: flex;
       align-items: center;
+      flex-shrink: 0;
     }
     
     .day-block {
@@ -823,12 +835,17 @@
       gap: 5px;
       margin-bottom: 1rem;
       -webkit-overflow-scrolling: touch;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-behavior: smooth;
+      padding-right: 0.5rem;
     }
     
     .tab-btn { 
       padding: 7px 12px;
       font-size: 11px;
       min-height: 40px;
+      flex-shrink: 0;
     }
     
     .day-block { 
